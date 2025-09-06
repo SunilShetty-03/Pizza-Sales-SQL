@@ -36,19 +36,7 @@ Total Revenue: $817,860.05
 Highest-Priced Pizza: The Greek Pizza ($35.95) 
 Most Common Size: Large (18,526 orders) 
 Average Pizzas per Day: 138
-Problem 1 (Total Orders) Simple COUNT query on orders table; result shows 21,350 orders.
-Problem 2 (Total Revenue) JOIN order_details and pizzas, SUM quantity * price; rounded to $817,860.05.
-Problem 3 (Highest-Priced Pizza) JOIN pizza_types and pizzas, ORDER BY price DESC LIMIT 1; identifies The Greek Pizza.
-Problem 4 (Most Common Size) JOIN pizzas and order_details, GROUP BY size, ORDER BY count DESC LIMIT 1; Large size dominates.
-Problem 5 (Top 5 Pizza Types by Quantity) Multi-JOIN, SUM quantity, GROUP BY name, ORDER DESC LIMIT 5; e.g., Classic Deluxe (2,453).
-Problem 6 (Quantity by Category) Multi-JOIN, SUM quantity, GROUP BY category, ORDER DESC; Classic leads with 14,888.
-Problem 7 (Orders by Hour) HOUR function on time, COUNT orders, GROUP BY hour; peaks at 12-13 (around 2,500 each).
-Problem 8 (Pizzas per Category) COUNT names, GROUP BY category; balanced distribution (6-9 per category).
-Problem 9 (Average Pizzas per Day) Subquery to SUM daily quantities, then AVG; 138 pizzas/day.
-Problem 10 (Top 3 by Revenue) Multi-JOIN, SUM revenue, GROUP BY name, ORDER DESC LIMIT 3; Thai Chicken tops at $43,434.25.
-Problem 11 (Percentage by Category) Subquery for total revenue, calculate category %; Classic ~27%.
-Problem 12 (Cumulative Revenue) Window function SUM OVER ORDER BY date; shows growth over time.
-Problem 13 (Top 3 per Category by Revenue) RANK() OVER PARTITION BY category; e.g., Thai Chicken for Chicken category.
+
 
 Business Impact & Insights
 
